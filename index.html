@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    
+  </head>
+  <body>
+    <div id="app" class="uk-container uk-container-small uk-margin-large-top uk-margin-large-bottom">
+      <form id="formsubmit" class="uk-margin-large uk-form-stacked uk-margin-auto uk-card uk-card-body uk-card-default" enctype="multipart/form-data">
+          <h1 class="uk-h1 uk-margin-medium">Agent Form</h1>
+          <div class="uk-margin uk-margin-large-top">
+            <label class="uk-form-label uk-width-1-1" for="name">Name</label>
+            <div class="uk-form-controls uk-width-1-1 uk-form-width-large">
+                <input name="name" class="uk-input uk-width-1-1 uk-form-width-large" id="name" type="text" placeholder="Your name" required>
+            </div>
+          </div>
+
+          <div class="uk-margin">
+            <label class="uk-form-label uk-width-1-1" for="email">Email</label>
+            <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                <input name="email" class="uk-input uk-width-1-1 uk-form-width-large" id="email" type="email" placeholder="Your Email" required>
+            </div>
+          </div>
+
+          <div class="uk-margin">
+            <label class="uk-form-label uk-width-1-1" for="address">Address</label>
+            <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                <input name="address" class="uk-input uk-width-1-1 uk-form-width-large" id="address" type="text" placeholder="Your Address" required>
+            </div>
+          </div>
+
+          <div class="uk-margin uk-grid uk-child-width-expand" uk-grid>
+            <div class="uk-width-1-4@s">
+              <label class="uk-form-label uk-width-1-1" for="provinceSelect">Provinces</label>
+              <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                <select name="state_id" class="uk-select" id="provinceSelect" required>
+                  <option>Provinces</option>
+                </select>
+              </div>
+            </div>
+            <div class="uk-width-1-4@s">
+              <label class="uk-form-label uk-width-1-1" for="districtsSelect">Districts</label>
+              <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                <select name="district_id" class="uk-select" id="districtsSelect" required>
+                  <option>Districts</option>
+                </select>
+              </div>
+            </div>
+            <div class="uk-width-1-4@s">
+              <label class="uk-form-label uk-width-1-1" for="citySelect">City</label>
+              <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                <select name="city_id" class="uk-select" id="citySelect" required>
+                  <option>City</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="uk-form-label uk-width-1-1" for="ward_no">Ward no</label>
+              <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                  <input name="ward_no" class="uk-input uk-width-1-1 uk-form-width-large" id="ward_no" type="text" placeholder="Ward no" required>
+              </div>
+            </div>
+          </div>
+          
+          <div class="uk-margin uk-grid uk-child-width-expand" uk-grid>
+            <div>
+              <label class="uk-form-label uk-width-1-1" for="mobile_no">Mobile no.</label>
+              <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                  <input class="uk-input uk-width-1-1 uk-form-width-large" id="mobile_no" type="text" placeholder="Mobile no">
+              </div>
+              <div id="mobileOrLandline" class="uk-text-danger"></div>
+            </div>
+            <div>
+              <label class="uk-form-label uk-width-1-1" for="landline_no">Landline no</label>
+              <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                  <input class="uk-input uk-width-1-1 uk-form-width-large" id="landline_no" type="text" placeholder="Landline no">
+              </div>
+            </div>
+          </div>
+          
+          <div class="uk-margin">
+            <label class="uk-form-label uk-width-1-1" for="contact_personl">Conatct Personal</label>
+            <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                <input class="uk-input uk-width-1-1 uk-form-width-large" id="contact_personl" type="text" placeholder="Name of owner">
+            </div>
+          </div>
+
+          <div class="uk-margin">
+            <label class="uk-form-label uk-width-1-1" for="lead">Agent Lead</label>
+            <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                <input class="uk-input uk-width-1-1 uk-form-width-large" id="lead" name="lead" type="text" placeholder="Lead">
+            </div>
+          </div>
+          
+          <div id="staffPhone-table">
+            <div class="uk-margin uk-grid uk-child-width-expand" uk-grid>
+              <div class="uk-width-1-2@s">
+                <label class="uk-form-label uk-width-1-1" for="staffname[0]">Staff Name</label>
+                <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                    <input class="uk-input uk-width-1-1 uk-form-width-large" id="staffname[0]" name="staffname[0]" type="text" placeholder="Staff Name">
+                </div>
+              </div>
+              <div class="uk-width-1-3@s uk-width-2-3">
+                <label class="uk-form-label uk-width-1-1" for="staffmobile[0]">Staff Mobile</label>
+                <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                    <input class="uk-input uk-width-1-1 uk-form-width-large" name="staffmobile[0]" id="staffmobile[0]" type="text" placeholder="Staff Mobile">
+                </div>
+              </div>
+              <div class="uk-width-1-6">
+                <label class="uk-form-label uk-width-1-1"> &nbsp; </label>
+                <span uk-icon="icon: plus-circle" class="uk-margin-small-top add_icon add_row" id="add-staffPhone"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="uk-margin uk-grid uk-child-width-expand" uk-grid>
+            <div class="uk-width-1-2@s">
+              <label class="uk-form-label uk-width-1-1" for="agent_type">Agent Type</label>
+              <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                <select class="uk-select" id="agent_type" name="category_id">
+                  <option>Agent type</option>
+                </select>
+              </div>
+            </div>
+            <div class="uk-width-1-2@s">
+              <label class="uk-form-label uk-width-1-1" for="agent_subcategories">Agent Subcategories</label>
+              <div class="uk-form-controls uk-width-1-1 uk-form-width-large"> 
+                  <select class="uk-select" id="agent_subcategories" name="agent_subcategories">
+                    <option>Agent type</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="uk-margin uk-grid uk-child-width-expand" uk-grid>
+            <div class="uk-width-1-1">
+              <div id="category_form" uk-grid></div>
+            </div>
+          </div>
+
+          <div class="uk-margin uk-grid uk-child-width-expand" uk-grid>
+            <div class="uk-width-1-1">
+              <div id="subcategory_form" uk-grid></div>
+            </div>
+          </div>
+
+          <button class="uk-margin-medium-top uk-button-primary uk-button">Submit</button>
+      </form>
+    </div>
+    <script type="module" src="/main.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>

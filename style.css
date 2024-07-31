@@ -1,0 +1,28 @@
+.add_icon:hover{
+  cursor: pointer;
+}
+#category_form:not(:empty)::before, #subcategory_form:not(:empty)::before{
+  content: "Agent Type Forms";
+  margin-bottom: 20px;
+  width: 100%;
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  padding-left: 40px;
+  margin-top: 20px;
+}
+#subcategory_form:not(:empty)::before{
+  content: "Agent Subcategories Forms";
+}
+.fileUploadFields:after {
+  content: "upload";
+  position: absolute;
+  z-index: 0;
+  right: 0px;
+  top: 0;
+  background: #e9e9e9;
+  height: 39px;
+  padding: 0px 30px;
+  line-height: 35px;
+  color: #707070;
+}
